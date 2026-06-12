@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { WordsPullUpMultiStyle } from './WordsPullUpMultiStyle';
 
 const BODY_TEXT =
-  'Over the last seven years, I have worked with Parallax, a Berlin-based production house that crafts cinema, series, and Noir Studio in Paris. Together, we have created work that has earned international acclaim at several major festivals.';
+  'By day, I am a software engineer at Google working on Shopping in Gemini. Before that, I interned at LinkedIn and Amazon. By night, I love coding random websites — small ideas I ship into real, live products, from stock alert engines to leaderboards to a neighborhood market storefront.';
 
 interface AnimatedLetterProps {
   char: string;
@@ -29,10 +29,10 @@ export function About() {
   const chars = BODY_TEXT.split('');
 
   return (
-    <section className="bg-black px-4 py-16 sm:px-6 sm:py-24 md:px-8 md:py-32">
+    <section id="about" className="bg-black px-4 py-16 sm:px-6 sm:py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-6xl rounded-2xl bg-[#101010] px-6 py-16 text-center sm:px-10 sm:py-20 md:rounded-[2rem] md:px-16 md:py-28">
         <span className="text-[10px] uppercase tracking-[0.25em] text-primary sm:text-xs">
-          Visual arts
+          My story
         </span>
 
         <h2
@@ -41,10 +41,10 @@ export function About() {
         >
           <WordsPullUpMultiStyle
             segments={[
-              { text: 'I am Marcus Chen,', className: 'font-normal' },
-              { text: 'a self-taught director.', className: 'italic font-serif' },
+              { text: 'I am Jeffrey Liu,', className: 'font-normal' },
+              { text: 'a software engineer.', className: 'italic font-serif' },
               {
-                text: 'I have skills in color grading, visual effects, and narrative design.',
+                text: 'I build for the web — from trading tools to neighborhood storefronts.',
                 className: 'font-normal',
               },
             ]}

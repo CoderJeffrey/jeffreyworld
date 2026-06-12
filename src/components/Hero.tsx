@@ -2,7 +2,10 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { WordsPullUp } from './WordsPullUp';
 
-const NAV_ITEMS = ['Our story', 'Collective', 'Workshops', 'Programs', 'Inquiries'];
+const NAV_ITEMS = [
+  { label: 'My Story', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+];
 
 const HERO_VIDEO_URL =
   'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4';
@@ -26,14 +29,14 @@ export function Hero() {
           <div className="flex items-center gap-3 rounded-b-2xl bg-black px-4 py-2 sm:gap-6 md:gap-12 md:rounded-b-3xl md:px-8 lg:gap-14">
             {NAV_ITEMS.map((item) => (
               <a
-                key={item}
-                href="#"
+                key={item.label}
+                href={item.href}
                 className="whitespace-nowrap text-[10px] transition-colors sm:text-xs md:text-sm"
                 style={{ color: 'rgba(225, 224, 204, 0.8)' }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = '#E1E0CC')}
                 onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(225, 224, 204, 0.8)')}
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
@@ -44,7 +47,7 @@ export function Hero() {
             <div className="col-span-12 lg:col-span-8">
               <h1 style={{ color: '#E1E0CC' }}>
                 <WordsPullUp
-                  text="Prisma"
+                  text="Jeffrey"
                   showAsterisk
                   className="text-[26vw] font-medium leading-[0.85] tracking-[-0.07em] sm:text-[24vw] md:text-[22vw] lg:text-[20vw] xl:text-[19vw] 2xl:text-[20vw]"
                 />
@@ -58,22 +61,23 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="text-xs leading-[1.2] text-primary/70 sm:text-sm md:text-base"
               >
-                Prisma is a worldwide network of visual artists, filmmakers and storytellers bound
-                not by place, status or labels but by passion and hunger to unlock potential
-                through our unique perspectives.
+                I'm Jeffrey, a software engineer at Google working on Shopping in Gemini, with
+                past internships at LinkedIn and Amazon. Off the clock, I love coding random
+                websites and shipping them into the world.
               </motion.p>
 
-              <motion.button
+              <motion.a
+                href="mailto:jeffrey.jl.liu@gmail.com"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 className="group flex items-center gap-2 rounded-full bg-primary py-1.5 pl-5 pr-1.5 text-sm font-medium text-black transition-all hover:gap-3 sm:pl-6 sm:text-base"
               >
-                Join the lab
+                Get in touch
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-black transition-transform group-hover:scale-110 sm:h-10 sm:w-10">
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5" style={{ color: '#E1E0CC' }} />
                 </span>
-              </motion.button>
+              </motion.a>
             </div>
           </div>
         </div>

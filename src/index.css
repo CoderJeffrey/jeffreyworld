@@ -11,6 +11,7 @@
    it must be positioned for offsets to resolve */
 html {
   position: relative;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -10,39 +10,43 @@ interface FeatureCardData {
   number: string;
   title: string;
   icon: string;
+  url: string;
   items: string[];
 }
 
 const FEATURE_CARDS: FeatureCardData[] = [
   {
     number: '01',
-    title: 'Project Storyboard.',
+    title: 'IndicatorHub.',
     icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171918_4a5edc79-d78f-4637-ac8b-53c43c220606.png&w=1280&q=85',
+    url: 'https://indicatorhub.dev/',
     items: [
-      'Organize scenes with visual clarity',
-      'Drag-and-drop shot sequencing',
-      'Collaborative frame annotations',
-      'Version history for every cut',
+      'Watches your tickers against technical conditions',
+      'RSI, MACD, Bollinger and more, with AND/OR logic',
+      'Ranked pre-market digest emailed at 6:30 ET daily',
+      'Free for up to 50 tickers',
     ],
   },
   {
     number: '02',
-    title: 'Smart Critiques.',
+    title: 'FinX Leaderboard.',
     icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171741_ed9845ab-f5b2-4018-8ce7-07cc01823522.png&w=1280&q=85',
+    url: 'https://finx-leaderboard.com/',
     items: [
-      'AI-driven analysis of pacing and color',
-      'Creative notes from seasoned mentors',
-      'Integrates with your favorite tools',
+      'Tracks influencer stock calls on X',
+      'Ranks accounts by what happened after each post',
+      'Live win rates and verified pick performance',
     ],
   },
   {
     number: '03',
-    title: 'Immersion Capsule.',
+    title: 'Santo Market.',
     icon: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260405_171809_f56666dc-c099-4778-ad82-9ad4f209567b.png&w=1280&q=85',
+    url: 'https://santomarket.vercel.app/',
     items: [
-      'Silences notifications during deep work',
-      'Ambient soundscapes for full immersion',
-      'Syncs with your creative schedule',
+      'Site for a third-generation Japantown market and deli',
+      'Daily poke bowls, plate lunches and online ordering',
+      'Serving San Jose since 1946',
     ],
   },
 ];
@@ -58,7 +62,7 @@ export function Features() {
   const isInView = useInView(gridRef, { once: true, margin: '-100px' });
 
   return (
-    <section className="relative min-h-screen bg-black px-4 py-20 sm:px-6 md:px-8 md:py-32">
+    <section id="projects" className="relative min-h-screen bg-black px-4 py-20 sm:px-6 md:px-8 md:py-32">
       <div className="bg-noise pointer-events-none absolute inset-0 opacity-[0.15]" />
 
       <div className="relative mx-auto max-w-7xl">
@@ -66,10 +70,10 @@ export function Features() {
           <WordsPullUpMultiStyle
             segments={[
               {
-                text: 'Studio-grade workflows for visionary creators.',
+                text: 'Random websites I could not stop building.',
                 className: 'text-[#E1E0CC]',
               },
-              { text: 'Built for pure vision. Powered by art.', className: 'text-gray-500' },
+              { text: 'Real products. Live on the internet.', className: 'text-gray-500' },
             ]}
           />
         </h2>
@@ -94,7 +98,7 @@ export function Features() {
             />
             <div className="absolute bottom-0 left-0 p-5 sm:p-6">
               <p className="text-lg sm:text-xl" style={{ color: '#E1E0CC' }}>
-                Your creative canvas.
+                I love coding random websites.
               </p>
             </div>
           </motion.div>
@@ -130,10 +134,12 @@ export function Features() {
               </ul>
 
               <a
-                href="#"
+                href={card.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group mt-auto inline-flex items-center gap-1.5 pt-6 text-xs text-primary sm:text-sm"
               >
-                Learn more
+                Visit site
                 <ArrowRight className="h-3.5 w-3.5 -rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:h-4 sm:w-4" />
               </a>
             </motion.div>
