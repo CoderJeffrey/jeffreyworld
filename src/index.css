@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* body-level (not *) so font utilities like font-mono inherit into children */
+body {
   font-family: 'Almarai', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
 }
@@ -16,6 +17,11 @@ html {
 
 body {
   background-color: #000000;
+}
+
+/* Fraunces expressive axes: display-grade optical size, softened terminals, wonky alternates */
+.font-display {
+  font-variation-settings: 'opsz' 144, 'SOFT' 60, 'WONK' 1;
 }
 
 .noise-overlay {

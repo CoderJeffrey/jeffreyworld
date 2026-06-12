@@ -71,9 +71,12 @@ export function Features() {
             segments={[
               {
                 text: 'Random websites I could not stop building.',
-                className: 'text-[#E1E0CC]',
+                className: 'font-display font-medium text-[#E1E0CC]',
               },
-              { text: 'Real products. Live on the internet.', className: 'text-gray-500' },
+              {
+                text: 'Real products. Live on the internet.',
+                className: 'font-display italic text-gray-500',
+              },
             ]}
           />
         </h2>
@@ -97,7 +100,7 @@ export function Features() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div className="absolute bottom-0 left-0 p-5 sm:p-6">
-              <p className="text-lg sm:text-xl" style={{ color: '#E1E0CC' }}>
+              <p className="font-mono text-lg sm:text-xl" style={{ color: '#E1E0CC' }}>
                 I love coding random websites.
               </p>
             </div>
@@ -118,17 +121,17 @@ export function Features() {
               />
 
               <div className="mt-5 flex items-start justify-between gap-2 sm:mt-6">
-                <h3 className="text-lg sm:text-xl" style={{ color: '#E1E0CC' }}>
+                <h3 className="font-mono text-lg sm:text-xl" style={{ color: '#E1E0CC' }}>
                   {card.title}
                 </h3>
-                <span className="text-xs text-gray-500">({card.number})</span>
+                <span className="font-mono text-xs text-gray-500">({card.number})</span>
               </div>
 
               <ul className="mt-4 space-y-2.5 sm:mt-5">
                 {card.items.map((item) => (
                   <li key={item} className="flex items-start gap-2.5">
                     <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <span className="text-xs leading-snug text-gray-400 sm:text-sm">{item}</span>
+                    <span className="font-mono text-xs leading-snug text-gray-400 sm:text-sm">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -137,7 +140,7 @@ export function Features() {
                 href={card.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group mt-auto inline-flex items-center gap-1.5 pt-6 text-xs text-primary sm:text-sm"
+                className="group mt-auto inline-flex items-center gap-1.5 pt-6 font-mono text-xs text-primary sm:text-sm"
               >
                 Visit site
                 <ArrowRight className="h-3.5 w-3.5 -rotate-45 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:h-4 sm:w-4" />

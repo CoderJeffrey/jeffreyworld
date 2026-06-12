@@ -31,7 +31,7 @@ export function About() {
   return (
     <section id="about" className="bg-black px-4 py-16 sm:px-6 sm:py-24 md:px-8 md:py-32">
       <div className="mx-auto max-w-6xl rounded-2xl bg-[#101010] px-6 py-16 text-center sm:px-10 sm:py-20 md:rounded-[2rem] md:px-16 md:py-28">
-        <span className="text-[10px] uppercase tracking-[0.25em] text-primary sm:text-xs">
+        <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-primary sm:text-xs">
           My story
         </span>
 
@@ -53,7 +53,7 @@ export function About() {
 
         <p
           ref={paragraphRef}
-          className="mx-auto mt-10 max-w-2xl text-xs text-[#DEDBC8] sm:mt-14 sm:text-sm md:text-base"
+          className="mx-auto mt-10 max-w-2xl font-mono text-xs text-[#DEDBC8] sm:mt-14 sm:text-sm md:text-base"
         >
           {chars.map((char, i) => (
             <AnimatedLetter

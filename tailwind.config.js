@@ -8,6 +8,8 @@ export default {
       },
       fontFamily: {
         serif: ['"Instrument Serif"', 'serif'],
+        mono: ['"IBM Plex Mono"', 'monospace'],
+        display: ['"Fraunces"', 'serif'],
       },
     },
   },
