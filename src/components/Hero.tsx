@@ -7,8 +7,7 @@ const NAV_ITEMS = [
   { label: 'Projects', href: '#projects' },
 ];
 
-const HERO_VIDEO_URL =
-  'https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260405_170732_8a9ccda6-5cff-4628-b164-059c500a2b41.mp4';
+const HERO_VIDEO_URL = 'https://jeffreycodingcyber.vercel.app/';
 
 export function Hero() {
   return (
@@ -23,7 +22,7 @@ export function Hero() {
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="noise-overlay pointer-events-none absolute inset-0 opacity-[0.7] mix-blend-overlay" />
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/75" />
 
         <nav className="absolute left-1/2 top-0 -translate-x-1/2">
           <div className="flex items-center gap-3 rounded-b-2xl bg-black px-4 py-2 sm:gap-6 md:gap-12 md:rounded-b-3xl md:px-8 lg:gap-14">
@@ -59,10 +58,10 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                className="font-mono text-xs leading-[1.2] text-primary/70 sm:text-sm md:text-base"
+                className="font-mono text-xs leading-[1.2] text-primary/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.9)] sm:text-sm md:text-base"
               >
-                I'm Jeffrey, a software engineer at Google working on Shopping in Gemini, with
-                past internships at LinkedIn and Amazon. Off the clock, I love coding random
+                I am Jeffrey Liu, a software engineer at Google working on Shopping in Gemini,
+                with past internships at LinkedIn and Amazon. Off the clock, I love coding random
                 websites and shipping them into the world.
               </motion.p>
 
