@@ -60,7 +60,7 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
                 className="font-mono text-xs leading-[1.2] text-primary/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.9)] sm:text-sm md:text-base"
               >
-                I am Jeffrey Liu, a software engineer at Google working on Shopping in Gemini,
+                I am Jeffrey Liu, a software engineer at Google working on Shopping on Gemini,
                 with past internships at LinkedIn and Amazon. Off the clock, I love coding random
                 websites and shipping them into the world.
               </motion.p>

@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
 import { WordsPullUpMultiStyle } from './WordsPullUpMultiStyle';
 
 const BODY_TEXT =
-  'By day, I am a software engineer at Google working on Shopping in Gemini. Before that, I interned at LinkedIn and Amazon. By night, I love coding random websites — small ideas I ship into real, live products, from stock alert engines to leaderboards to a neighborhood market storefront.';
+  'By day, I am a software engineer at Google working on Shopping on Gemini. Before that, I interned at LinkedIn and Amazon. By night, I love coding random websites — small ideas I ship into real, live products, from stock alert engines to leaderboards to a neighborhood market storefront.';
 
 interface AnimatedLetterProps {
   char: string;
