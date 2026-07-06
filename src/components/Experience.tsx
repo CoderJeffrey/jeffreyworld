@@ -35,7 +35,7 @@ const EXPERIENCE: ExperienceEntry[] = [
     title: 'Software Engineer Intern',
     location: 'East Palo Alto, CA',
     dates: 'May 2023 – Aug 2023',
-    description: 'AWS OpenSearch (Open source version of ElasticSearch)',
+    description: 'AWS OpenSearch',
   },
   {
     company: 'Stanford AI Lab (SAIL)',
